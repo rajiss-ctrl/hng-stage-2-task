@@ -139,11 +139,14 @@ nav ul li{
   ;
   /* padding-right: 40px; */
 }
+ul li.hover-action a{
+  color: inherit;
+}
 .hover-action{
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  
 }
 .hover-action:hover{
   color:rgba(0, 0, 0, 1);

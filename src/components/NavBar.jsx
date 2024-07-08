@@ -19,7 +19,7 @@ const NavBar = () => {
       <Link to="/"><img src={Logo} alt="" /></Link>
       </div>
       <ul className={`${burger ? "hidden" : "open"} `}>
-        <li className='hover-action'><Link to="homepage">Home</Link></li>
+        <li className='hover-action'><Link to="/">Home</Link></li>
         <li className='hover-action'>Shop</li>
         <li className='hover-action'> <span>Categories</span> <img src={Chevron} alt="" /></li>
         <li className='hover-action'>About</li>
