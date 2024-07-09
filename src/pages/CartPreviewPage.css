@@ -7,6 +7,7 @@
 .product{
     width: 60%;
     padding: 41px 0  104px 0;
+
 }
 .cost{
   margin-top: -41px;
@@ -14,13 +15,16 @@
 
 .product-table {
     margin: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
   }
   
   table {
     width: 100%;
     border-collapse: collapse;
+    /* border-radius:!important 40px; */
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
     border-radius: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
   }
   
   th, td {
@@ -136,8 +140,8 @@
 
   .cost{
     background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
     width: 410px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-top: -110px;
     padding: 24px;
@@ -168,9 +172,7 @@
     text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
-  .credit-card{
-    background: rgba(228, 232, 231, 0.3);
-  }
+ 
   .cost button{
     background: rgba(79, 112, 91, 1);
     padding: 10px 58px 10px 58px;
@@ -188,10 +190,29 @@
     font-weight: 400;
     line-height: 16.2px;
   }
-  @media screen and (max-width: 360px){
+  .payment-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-option img {
+    margin-left: 10px;
+  }
+  
+  .payment-option.selected {
+    background-color: rgba(228, 232, 231, 0.3);
+  }
+  
+
+
+
+  @media screen and (max-width: 600px){
     .cartpreview-wrap{
       flex-direction: column;
-      padding: 0 20px;
+      padding:0 30px 100px 30px;
   }
   .product{
       width: 100%;
@@ -207,6 +228,16 @@
   .check-img {
     margin-left:10px ;
   }
+  .cost button{
+    background: rgba(79, 112, 91, 1);
+    padding: 8px 15px 8px 15px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+  }
+ 
+
   
   }
 
@@ -220,7 +251,7 @@
 }
 
 .cost {
-  margin-top: -41px;
+  margin-top: 10px;
 }
 
 .product-table {

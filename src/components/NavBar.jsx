@@ -5,6 +5,7 @@ import Cart from '../assets/cart.svg'
 import CartGreen from '../assets/cart-green.svg'
 import User from '../assets/user.svg'
 import BugerMenu from '../assets/Burger-Menu.svg'
+import Times from '../assets/times.svg'
 import { Link, useLocation } from 'react-router-dom'
 
 const NavBar = () => {
@@ -21,8 +22,11 @@ const NavBar = () => {
       <div className="logo">
       <Link to="/"><img src={Logo} alt="" /></Link>
       </div>
-      <ul className={`${burger ? "hidden" : "open"} `}>
-        <li className={`hover-action ${location.pathname === "/"  ? "active" : "inActive" }`}><Link to="/">Home</Link></li>
+      <ul className={`${!burger ? "hidden" : "open"} `}>
+        <img onClick={handleBurgerMenu} className='times' src={Times} alt="" />
+        <li className={`hover-action ${location.pathname === "/"  ? "active" : "inActive" }`}>
+        <Link to="/">Home</Link>
+        </li>
         <li className='hover-action'>Shop</li>
         <li className='hover-action'>Categories</li>
         <li className='hover-action'>About</li>

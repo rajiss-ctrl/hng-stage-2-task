@@ -147,6 +147,7 @@ form div .form2-btn button{
     
     .form2 {
       height: auto;
+      margin-top: 40px;
     }
   
     form input {
@@ -194,7 +195,9 @@ form div .form2-btn button{
     .form2-btn button {
       padding: 8px 20px;
     }
-  
+ .checkoutform-wrapper{
+    padding:60px 30px 100px 30px;
+  }
     form input {
       padding: 8px;
       margin-bottom: 16px;

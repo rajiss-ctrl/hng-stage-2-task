@@ -14,11 +14,12 @@ const CheckoutForm = () => {
     console.log(data);
   };
 
+
     return (
         <section className='checkout'>
             <div className="cta-remark">
-       <p> Free deliveries on all orders within Nigeria</p>
-      </div>
+              <p> Free deliveries on all orders within Nigeria</p>
+            </div>  
           <NavBar/>
           <div className="checkoutform-wrapper">
           <img className='checkout' src={Leave} alt="" />
