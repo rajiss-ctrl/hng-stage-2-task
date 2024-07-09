@@ -4,7 +4,9 @@
   box-sizing: border-box;
   font-family: Satoshi;
 }
-
+.times{
+  display: none;
+}
 /* HomePage styles */
 .cta-remark{
   padding: 8px, 60px, 8px, 60px;
@@ -587,6 +589,7 @@ line-height: 16.2px;
     transition: all 0.8s ease;
   }
   nav .open img.times{
+    display: block;
     width: 16px;
     position: absolute;
     top: 10px;
