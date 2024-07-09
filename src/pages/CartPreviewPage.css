@@ -1,0 +1,204 @@
+.cartpreview-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px 0 0;
+}
+.product{
+    width: 60%;
+    padding: 41px 0  104px 0;
+}
+.cost{
+  margin-top: -41px;
+}
+
+.product-table {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    text-align: left;
+  }
+  .check-img {
+    position: relative;
+    display: inline-block;
+    margin-left: 23px;
+  }
+  
+  .check-img input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0; /* Adjust as needed */
+    left: -25px; /* Adjust as needed */
+  }
+  
+  .check-img img {
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+  
+  th.product-check-all,
+  td div.check-img,
+  td.td-flex{
+      display: flex;
+      gap: 5px;
+      
+    }
+   
+    th.product-check-all{
+      align-items: center;
+  }
+  th.product-check-all input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+  }
+ td div.minus-plus{
+  cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px;
+    border-radius: 5px;
+    font-family: Satoshi;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16.2px;
+ }
+ td button{
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+ }
+ td span{
+    font-family: Satoshi;
+    color: rgba(0, 0, 0, 1);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.2px;
+ }
+ td.price{
+    font-family: Satoshi;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16.2px;
+    color: rgba(0, 0, 0, 1);
+ }
+ td button img{
+    width: 16px;
+ }
+  th,td{
+      padding: 16px 60px;
+  }
+  th {
+    font-family: Satoshi;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.2px;
+  }
+  
+  td {
+    background-color: #fff;
+  }
+  td.td-flex .title-size h4{
+    color: rgba(0, 0, 0, 0.7);
+    font-family: Satoshi;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.6px;
+  }
+  td.td-flex .title-size span{
+    color:rgba(0, 0, 0, 0.7) ;
+    font-family: Satoshi;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.2px;
+  }
+
+  .cost{
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    width: 410px;
+    border-radius: 10px;
+    margin-top: -110px;
+    padding: 24px;
+    }
+    section h1.cart-preview{
+      text-align: center;
+      padding: 42px 0 42px 0;
+    }
+    .btn{
+      text-align: center; 
+    }
+  .cost .calculation .subtotal,
+  .cost .calculation .discount,
+  .cost .calculation .grand-total,
+  .bank,.credit-card,.apple-pay{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .mode-of-payment h4{
+    font-family: Satoshi;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16.2px;
+    padding: 51px 0 18px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .credit-card{
+    background: rgba(228, 232, 231, 0.3);
+  }
+  .cost button{
+    background: rgba(79, 112, 91, 1);
+    padding: 10px 58px 10px 58px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+  }
+  .subtotal span,
+  .discount span,
+  .grand-total span,
+  .bank span, .credit-card span, .apple-pay span{
+    font-family: Satoshi;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.2px;
+  }
+  @media screen and (max-width: 360px){
+    .cartpreview-wrap{
+      flex-direction: column;
+      padding: 0 20px;
+  }
+  .product{
+      width: 100%;
+      padding: 60px 20px;
+  }
+  .cost{
+    width: 100%;
+  }
+  
+  }

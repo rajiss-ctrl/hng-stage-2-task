@@ -24,7 +24,7 @@ const CarouselComponent = ({ items }) => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           centerMode: false,
         },
       },

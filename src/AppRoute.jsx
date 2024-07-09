@@ -2,6 +2,8 @@ import { Route, Routes } from 'react-router-dom'
 import Layout from './layout/Layout'
 import HomePage from './pages/HomePage'
 import CartPreviewPage from './pages/CartPreviewPage'
+import CheckoutForm from './pages/CheckoutForm'
+
 
 
 const AppRoute = () => {
@@ -14,6 +16,7 @@ const AppRoute = () => {
         </Layout>
      }/>
      <Route path="/cartpreviewpage" element={<CartPreviewPage/>} />
+     <Route path="/checkout-form" element={<CheckoutForm/>} />
  {/* <Route path="/auth-callback-page" element={<AuthCallbackPage/>} /> */}
  {/* <Route element={<ProtectedRoute/>}>
    <Route pathh="/user-profile" element={

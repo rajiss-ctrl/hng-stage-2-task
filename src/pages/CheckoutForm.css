@@ -1,0 +1,15 @@
+.checkoutform-wrapper{
+    width: 100%;
+    position: relative;
+    min-height: 400px;
+}
+.checkoutform-wrapper img.checkout{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 358px;
+}
+.form-container{
+    display: flex;
+    justify-content: space-between;
+}

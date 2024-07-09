@@ -140,6 +140,7 @@ nav ul li{
   /* padding-right: 40px; */
 }
 ul li.hover-action a{
+  text-decoration: none;
   color: inherit;
 }
 .hover-action{
@@ -383,9 +384,7 @@ margin-top: 16px;
   nav .nav-item-right .search{
     display: none;
   }
-  .burger-menu{
-    display: block;
-  }
+ 
 
   .hero-content,.footer-content{
     display: flex;
@@ -487,16 +486,33 @@ line-height: 16.2px;
   
   nav ul.hidden{
     display: none;
+    transition: all 0.8s ease;
   }
   nav ul.open{
-    display: none;
+    display: block;
+    transition: all 0.8s ease;
+  }
+  
+  nav{
+    position: relative;
+    padding: 0;
   }
   nav ul{
+    position: fixed;
+    left: 0;
+    top: 0;
     justify-content: center;
     flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 20px 0 0 20px;
+    transition: all 0.8s ease;
   }
-  nav{
-    padding: 0;
+  nav ul li{
+    margin-bottom:16px;
   }
   .nav-container {
     padding:0 20px;
@@ -553,6 +569,7 @@ text-align: center;
 font-size: 12px;
 font-weight: 400;
 line-height: 20px;
+padding: 0;
 text-align: center;
   }
   .hero-content .hero-img{
@@ -565,8 +582,24 @@ text-align: center;
   .feature-product{
       padding:62px 20px 0 20px;
   }
+  .carousel-container {
+    width: 100%;
+    padding:0 0;
+    /* margin: auto; */
+  }
+  .carousel{
+    margin: 0;
+  }
+  .carousel-item {
+    width: 100%;
+    padding: 2rem 0;
+  }
   .carousel-card {
+    width: 120px;
     transform: scale(0.9);
+  }
+  .slick-list{
+    height: 300px;
   }
   .rectangle-img{
     justify-content: center;

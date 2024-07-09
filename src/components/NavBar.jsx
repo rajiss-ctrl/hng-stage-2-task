@@ -10,7 +10,8 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
   const [burger, setBurger]= useState(false)
   const handleBurgerMenu =()=>{
-    setBurger(true)
+    console.log("I am clicked")
+    setBurger(prev=> !prev)
   }
   return (
     <div className='nav-container'>
