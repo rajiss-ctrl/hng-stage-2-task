@@ -113,3 +113,147 @@ form div .form2-btn button{
     color: rgba(235, 87, 87, 1);
 
 }
+
+@media (max-width: 1024px) {
+    .checkoutform-wrapper h1 {
+      padding: 30px;
+      font-size: 20px;
+    }
+    
+    .form-container {
+      flex-direction: column;
+      align-items: center;
+      padding-right: 0;
+    }
+  
+    .form1, .form2 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .billing, .credit-card-flex, .form-container form {
+      padding: 16px 30px;
+    }
+    
+    .ex-date-cvv {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .ex-date-cvv input {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    
+    .form2 {
+      height: auto;
+    }
+  
+    form input {
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  
+    form h4 {
+      padding: 10px 0;
+    }
+  
+    .remember-btn p {
+      font-size: 10px;
+    }
+  
+    .form2-btn button {
+      padding: 10px 20px;
+    }
+  
+    .checkoutform-wrapper img.checkout {
+      width: 100px;
+      right: 10px;
+    }
+  }
+  
+  /* For mobile screens (max-width: 768px) */
+  @media (max-width: 768px) {
+    .checkoutform-wrapper h1 {
+      padding: 20px;
+      font-size: 18px;
+    }
+    
+    .billing h4, .credit-card-flex h4 {
+      font-size: 10px;
+    }
+    
+    .form-container form {
+      padding: 10px 20px;
+    }
+  
+    .billing, .credit-card-flex {
+      padding: 10px 20px;
+    }
+  
+    .form2-btn button {
+      padding: 8px 20px;
+    }
+  
+    form input {
+      padding: 8px;
+      margin-bottom: 16px;
+    }
+  
+    form h4 {
+      padding: 8px 0;
+    }
+  
+    .remember-btn p {
+      font-size: 8px;
+    }
+  
+    .ex-date-cvv {
+      gap: 0;
+    }
+  
+    .ex-date-cvv input {
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* For small mobile screens (max-width: 480px) */
+  @media (max-width: 480px) {
+    .checkoutform-wrapper h1 {
+      padding: 10px;
+      font-size: 16px;
+    }
+    
+    .billing h4, .credit-card-flex h4 {
+      font-size: 8px;
+    }
+    
+    .form-container form {
+      padding: 10px;
+    }
+  
+    .billing, .credit-card-flex {
+      padding: 10px;
+    }
+  
+    .form2-btn button {
+      padding: 8px 10px;
+    }
+  
+    form input {
+      padding: 6px;
+      margin-bottom: 12px;
+    }
+  
+    form h4 {
+      padding: 6px 0;
+    }
+  
+    .remember-btn p {
+      font-size: 8px;
+    }
+  
+    .checkoutform-wrapper img.checkout {
+      width: 80px;
+    }
+  }

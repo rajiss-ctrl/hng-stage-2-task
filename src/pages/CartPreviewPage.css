@@ -197,8 +197,290 @@
       width: 100%;
       padding: 60px 20px;
   }
+  .check-img img {
+    width: 40px;
+    height: 40px;
+  }
   .cost{
     width: 100%;
   }
+  .check-img {
+    margin-left:10px ;
+  }
   
   }
+
+
+  /* Initial CSS */
+
+.product {
+  width: 60%;
+  padding: 41px 0 104px 0;
+  margin: 0 auto;
+}
+
+.cost {
+  margin-top: -41px;
+}
+
+.product-table {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 60px;
+  text-align: left;
+}
+
+.check-img {
+  position: relative;
+  display: inline-block;
+  margin-left: 23px;
+}
+
+.check-img input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+
+.check-img img {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+th.product-check-all,
+td div.check-img,
+td.td-flex {
+  display: flex;
+  gap: 5px;
+}
+
+th.product-check-all {
+  align-items: center;
+}
+
+th.product-check-all input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+td div.minus-plus {
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px;
+  border-radius: 5px;
+  font-family: Satoshi;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16.2px;
+}
+
+td button {
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+td span {
+  font-family: Satoshi;
+  color: rgba(0, 0, 0, 1);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.2px;
+}
+
+td.price {
+  font-family: Satoshi;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16.2px;
+  color: rgba(0, 0, 0, 1);
+}
+
+td button img {
+  width: 16px;
+}
+
+th {
+  font-family: Satoshi;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.2px;
+}
+
+td {
+  background-color: #fff;
+}
+
+td.td-flex .title-size h4 {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+
+td.td-flex .title-size span {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Satoshi;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 1024px) {
+  .product {
+    width: 80%;
+  }
+
+  th, td {
+    padding: 12px 40px;
+  }
+
+  .check-img img {
+    width: 50px;
+    height: 50px;
+  }
+
+  td div.minus-plus {
+    width: 70px;
+    padding: 8px;
+  }
+
+  td button img {
+    width: 14px;
+  }
+
+  td span, td.price, th, td.td-flex .title-size span {
+    font-size: 10px;
+  }
+
+  td.td-flex .title-size h4 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    width: 90%;
+    padding: 20px 0 60px 0;
+  }
+
+  th, td {
+    padding: 10px 20px;
+  }
+
+  .check-img {
+    margin-left: 10px;
+  }
+
+  .check-img input[type="checkbox"] {
+    left: -20px;
+  }
+
+  .check-img img {
+    width: 40px;
+    height: 40px;
+  }
+
+  td div.minus-plus {
+    width: 60px;
+    padding: 6px;
+  }
+
+  td button img {
+    width: 12px;
+  }
+
+  td span, td.price, th, td.td-flex .title-size span {
+    font-size: 8px;
+  }
+
+  td.td-flex .title-size h4 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .product {
+    width: 100%;
+    padding: 20px 0 40px 0;
+  }
+  .check-img {
+    margin-left: 5px;
+  }
+
+  .check-img input[type="checkbox"] {
+    left: 0;
+    width: 16px;
+    height: 16px;
+  }
+  th.product-check-all input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+  }
+
+
+  th, td {
+    padding: 8px 10px;
+  }
+
+  .check-img {
+    margin-left: 5px;
+  }
+
+  .check-img input[type="checkbox"] {
+    left: -15px;
+  }
+
+  .check-img img {
+    width: 30px;
+    height: 30px;
+  }
+
+  td div.minus-plus {
+    width: 50px;
+    padding: 4px;
+  }
+
+  td button img {
+    width: 10px;
+  }
+
+  td span, td.price, th, td.td-flex .title-size span {
+    font-size: 6px;
+  }
+  td.td-flex{
+    padding-left: 10px;
+  }
+  td.td-flex .title-size h4 {
+    font-size: 10px;
+  }
+}
+
+  
