@@ -1,43 +1,43 @@
 import React from 'react'
 import CarouselComponent from './Carousel';
-import Img1 from '../assets/Rectangle 43.svg'
-import Img2 from '../assets/Frame 70.svg'
+import Img1 from '../assets/slide1.png'
+import Img2 from '../assets/slide2.png'
 import Img4 from '../assets/Frame 73.svg'
 import BlackStar from '../assets/star.svg'
 import WhiteStar from '../assets/star-white.svg'
-import Img3 from '../assets/Rectangle 8.svg'
+import Img3 from '../assets/slide3.png'
 
 
 const items = [
   {
     image: `${Img1}`,
     title: '',
-    price:"₦12,000 - ₦28,000",
-    description: 'Oloture lip palm oil',
+    price:"₦127,000 - ₦200,000",
+    description: 'Night care set',
     blackstar:`${BlackStar}`,
     whitestar:`${WhiteStar}`,
   },
   {
     image: `${Img2}`,
     title: 'Card 2',
-    price:"₦12,000 - ₦28,000",
-    description: 'Oloture lip palm oil',
+    price:"₦127,000 - ₦200,000",
+    description: 'Night care set',
     blackstar:`${BlackStar}`,
     whitestar:`${WhiteStar}`,
   },
   {
     image: `${Img3}`,
     title: 'Card 3',
-    price:"₦12,000 - ₦28,000",
-    description: 'Oloture lip palm oil',
+    price:"₦127,000 - ₦200,000",
+    description: 'Night care set',
     blackstar:`${BlackStar}`,
     whitestar:`${WhiteStar}`,
   },
   {
-    image: `${Img4}`,
+    image: `${Img3}`,
     title: 'Card 4',
-    price:"₦12,000 - ₦28,000",
-    description: 'Oloture lip palm oil',
+    price:"₦127,000 - ₦200,000",
+    description: 'Night care set',
     blackstar:`${BlackStar}`,
     whitestar:`${WhiteStar}`,
   },
@@ -48,7 +48,7 @@ const FeatureProduct = () => {
     <section className='feature-product'>
       <h2>Featured products</h2>
       <p>Our best sellers for this week!</p>
-      <div className="carousel">
+      <div className="carousel-wrapper">
         <CarouselComponent items={items} />
       </div>
       <div className="center">
