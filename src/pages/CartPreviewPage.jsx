@@ -58,6 +58,9 @@ const CartPreviewPage = () => {
   }
   return (
     <section>
+        <div className="cta-remark">
+       <p> Free deliveries on all orders within Nigeria</p>
+      </div>
       <NavBar/>
       <h1 className='cart-preview'>Cart</h1>
       <div className="cartpreview-wrap">

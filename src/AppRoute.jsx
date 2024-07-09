@@ -15,7 +15,7 @@ const AppRoute = () => {
         <HomePage/>	
         </Layout>
      }/>
-     <Route path="/cartpreviewpage" element={<CartPreviewPage/>} />
+     <Route path="/cart-preview-page" element={<CartPreviewPage/>} />
      <Route path="/checkout-form" element={<CheckoutForm/>} />
  {/* <Route path="/auth-callback-page" element={<AuthCallbackPage/>} /> */}
  {/* <Route element={<ProtectedRoute/>}>

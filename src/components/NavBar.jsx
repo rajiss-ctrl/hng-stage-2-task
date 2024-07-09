@@ -32,7 +32,7 @@ const NavBar = () => {
         <img src={Search} alt="" />
         <input placeholder='Searh' type="text" />
       </div>
-      <Link to="cartpreviewpage"><img src={Cart} alt="" /></Link>
+      <Link to="cart-preview-page"><img src={Cart} alt="" /></Link>
       <img src={User} alt="" />
       <img onClick={handleBurgerMenu} className='burger-menu' src={BugerMenu} alt="" />
       </div>

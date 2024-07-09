@@ -118,7 +118,7 @@ nav .nav-item-right .search input{
   outline: hidden;
   background: transparent;
 }
-nav .nav-item-right .search input::placeholder {
+input::placeholder {
   color: rgba(0, 0, 0, 1); 
   font-size: 12px; 
   font-weight: 500; 
