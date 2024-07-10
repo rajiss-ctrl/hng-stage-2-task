@@ -240,38 +240,7 @@ input[type="checkbox"]:checked::before {
 
 
 
-  @media screen and (max-width: 600px){
-    .cartpreview-wrap{
-      flex-direction: column;
-      padding:0 30px 100px 30px;
-  }
-  .product{
-      width: 100%;
-      padding: 60px 20px;
-  }
-  .check-img img {
-    width: 40px;
-    height: 40px;
-  }
-  .cost{
-    width: 100%;
-  }
-  .check-img {
-    margin-left:10px ;
-  }
-  /* .cost button{
-    background: rgba(79, 112, 91, 1);
-    padding: 8px 15px 8px 15px;
-    border-radius: 8px;
-    color: #FFFFFF;
-    outline: none;
-    border: none;
-  } */
- 
-
   
-  }
-
 
   /* Initial CSS */
 
@@ -488,6 +457,45 @@ td.td-flex .title-size span {
   }
 }
 
+@media screen and (max-width: 600px){
+  .cartpreview-wrap{
+    flex-direction: column;
+    padding:0 30px 100px 30px;
+}
+.product{
+    width: 100%;
+    padding: 60px 20px;
+}
+.check-img img {
+  width: 40px;
+  height: 40px;
+}
+.cost{
+  width: 100%;
+}
+.check-img {
+  margin-left:10px ;
+}
+/* .cost button{
+  background: rgba(79, 112, 91, 1);
+  padding: 8px 15px 8px 15px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+} */
+
+.title-size h4{
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Satoshi;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 21.6px;
+  overflow-x: scroll;
+}
+
+}
+
 @media (max-width: 600px) {
   .product {
     width: 100%;
@@ -575,4 +583,3 @@ td.td-flex .title-size span {
   }
 }
 
-  
