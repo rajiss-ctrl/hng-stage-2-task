@@ -462,55 +462,76 @@ td.td-flex .title-size span {
     width: 100%;
     padding: 20px 0 40px 0;
   }
-  .check-img {
-    margin-left: 5px;
+  
+  th.product-check-all,
+  td.td-flex {
+    display: flex;
+    align-items: center;
   }
-
+  
+  th.product-check-all input[type="checkbox"],
   .check-img input[type="checkbox"] {
-    left: 0;
-    width: 16px;
-    height: 16px;
-  }
-  th.product-check-all input[type="checkbox"]{
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
 
+  /* th.product-check-all input[type="checkbox"] {
+    margin-right: 5px;
+  } */
 
   th, td {
     padding: 8px 10px;
   }
 
   .check-img {
-    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
   }
 
   .check-img input[type="checkbox"] {
-    left: -15px;
+    margin-right: 10px;
   }
 
   .check-img img {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .title-size {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   td div.minus-plus {
     width: 50px;
     padding: 4px;
+    display: flex;
+    align-items: center;
   }
 
   td button img {
     width: 10px;
   }
 
-  td span, td.price, th, td.td-flex .title-size span {
+  td span,
+  td.price,
+  th,
+  td.td-flex .title-size span {
     font-size: 6px;
   }
-  td.td-flex{
+
+  td.td-flex {
     padding-left: 10px;
   }
+
   td.td-flex .title-size h4 {
     font-size: 10px;
+  }
+
+  .cost {
+    margin-top: 60px;
   }
 }
 
