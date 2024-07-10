@@ -382,6 +382,9 @@ td.td-flex .title-size span {
   line-height: 16.2px;
 }
 
+.for-mobile,.btn-mobile{
+  display: none;
+}
 /* Responsive CSS */
 
 @media (max-width: 1024px) {
@@ -460,7 +463,35 @@ td.td-flex .title-size span {
 @media screen and (max-width: 600px){
   .cartpreview-wrap{
     flex-direction: column;
-    padding:0 30px 100px 30px;
+    padding:0 0 100px 0;
+}
+.btn{
+  display: none;
+}
+.btn-mobile{
+  display: block;
+  padding: 10px 58px 10px 58px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  background: rgba(79, 112, 91, 1);
+  margin-top: 24px;
+}
+.btn-mobile button{
+  outline:none ;
+  border: none;
+  color: #FFFFFF;
+  background: transparent;
+  
+}
+.for-mobile{
+  display: block;
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16.2px;
+  margin-bottom: -45px;
 }
 .product{
     width: 100%;

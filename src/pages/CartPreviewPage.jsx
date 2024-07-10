@@ -138,6 +138,7 @@ const CartPreviewPage = () => {
             </tbody>
           </table>
         </div>
+            <h4 className='for-mobile'>Breakdown</h4>
         <div className="cost">
           <div className="calculation">
             <div className="subtotal">
@@ -182,6 +183,9 @@ const CartPreviewPage = () => {
             <button onClick={handleCheckout}>Proceed to checkout</button>
           </div>
         </div>
+          <div className="btn-mobile">
+            <button onClick={handleCheckout}>Proceed to checkout</button>
+          </div>
       </div>
       <Footer />
     </section>
