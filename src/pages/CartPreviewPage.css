@@ -228,14 +228,14 @@
   .check-img {
     margin-left:10px ;
   }
-  .cost button{
+  /* .cost button{
     background: rgba(79, 112, 91, 1);
     padding: 8px 15px 8px 15px;
     border-radius: 8px;
     color: #FFFFFF;
     outline: none;
     border: none;
-  }
+  } */
  
 
   
@@ -532,6 +532,15 @@ td.td-flex .title-size span {
 
   .cost {
     margin-top: 60px;
+  }
+  .cost button{
+    background: rgba(79, 112, 91, 1);
+    padding: 18px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    margin-top: 15px;
   }
 }
 
