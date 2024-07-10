@@ -202,13 +202,7 @@ ul li.hover-action a{
   background:rgba(255, 59, 48, 1);
 }
 
-/* hover style */
-/* font-family: Satoshi;
-font-size: 12px;
-font-weight: 700;
-line-height: 16.2px;
-text-align: left;
-color:rgba(0, 0, 0, 1); */
+
 nav .nav-item-right{
   gap:24px;
 }
@@ -217,7 +211,7 @@ nav .nav-item-right{
 
 /* feature product */
 .feature-product{
-  padding:104px 0 87px 60px;
+  padding:104px 60px 87px 60px;
 }
 .feature-product h2{
   text-align: center;
@@ -241,12 +235,12 @@ line-height: 32.4px;
 }
 .rectangle-img{
   margin: 79px 0 104px 0;
-width: 100%;
-gap: 16px;
+  width: 100%;
+  gap: 16px;
 }
 
 .rectangle-img .feature-1{
-  width: 49%;
+  width: 50%;
   height: 348px;
   border-radius: 4px;
   background-image: url('./assets/Rectangle 9.svg'); 
@@ -273,7 +267,7 @@ color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
 }
 .rectangle-img .feature-2{
-  width: 49%;
+  width: 50%;
   height: 348px;
   border-radius: 4px;
   background-image: url('./assets/Frame 79.svg');
@@ -283,7 +277,7 @@ color: rgba(0, 0, 0, 0.7);
   background-position:bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  
 }
 .rectangle-img .feature-2 p{
   font-family: Satoshi;
@@ -367,8 +361,18 @@ justify-content: space-between;
   box-shadow: none;
 }
 .slick-center .carousel-card {
-  transform: scale(1.2);
+  transform: scale(1.2) translateY(27px); /* Adjust the value as needed */
   z-index: 1;
+}
+.slick-center .carousel-card button {
+  font-family: Satoshi;
+font-size: 12px;
+font-weight: 700;
+line-height: 28px;
+padding: 5px 10px;
+}
+.carousel-container .carousel-card {
+  margin-bottom: 30px; /* Add space between the card and the dots */
 }
 
 .carousel-card img {
@@ -596,6 +600,8 @@ line-height: 16.2px;
     top: 10px;
     right: 10px;
   }
+
+  
   nav{
     position: relative;
     padding: 0;
