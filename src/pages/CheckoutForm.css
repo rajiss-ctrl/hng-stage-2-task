@@ -71,7 +71,8 @@ form input{
     margin-bottom: 16px;
 }
 .remember-btn input{
-    width: 16px;
+    width: auto;
+    height: auto;
     margin: 0;
 }
 .remember-btn p{
@@ -221,7 +222,10 @@ form div .form2-btn button{
   }
   
   /* For small mobile screens (max-width: 480px) */
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
+    .checkout{
+      padding-top: 57px;
+    }
     .checkoutform-wrapper h1 {
       padding: 10px;
       font-size: 16px;

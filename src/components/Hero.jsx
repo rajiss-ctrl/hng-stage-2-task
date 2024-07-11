@@ -5,6 +5,9 @@ import HeroImg from '../assets/Frame 23.svg'
 const Hero = () => {
   return (
     <section className='hero-container'>
+        <div className="cta-remark-mobile">
+            <p> Free deliveries on all orders within Nigeria</p>
+      </div>
       <div className="navbar">
         <NavBar/>
       </div>

@@ -461,6 +461,9 @@ td.td-flex .title-size span {
 }
 
 @media screen and (max-width: 600px){
+  .cart-preview-container{
+    padding-top: 57px;
+  }
   .cartpreview-wrap{
     flex-direction: column;
     padding:0 0 100px 0;

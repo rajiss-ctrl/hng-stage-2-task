@@ -7,6 +7,7 @@ import User from '../assets/user.svg'
 import BugerMenu from '../assets/Burger-Menu.svg'
 import Times from '../assets/times.svg'
 import { Link, useLocation } from 'react-router-dom'
+import MobileNavbar from './MobileNavbar'
 
 const NavBar = () => {
   const [burger, setBurger]= useState(false)
@@ -19,10 +20,13 @@ const NavBar = () => {
   return (
     <div className='nav-container'>
     <nav>
+      <div className={`${!burger ? "hidden" : "open"} `}>
+        <MobileNavbar burger={burger} handleBurgerMenu={handleBurgerMenu}/>
+      </div>
       <div className="logo">
       <Link to="/"><img src={Logo} alt="" /></Link>
       </div>
-      <ul className={`${!burger ? "hidden" : "open"} `}>
+      <ul>
         <img onClick={handleBurgerMenu} className='times' src={Times} alt="" />
         <li className={`hover-action ${location.pathname === "/"  ? "active" : "inActive" }`}>
         <Link to="/">Home</Link>

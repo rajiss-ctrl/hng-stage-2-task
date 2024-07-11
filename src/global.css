@@ -4,10 +4,13 @@
   box-sizing: border-box;
   font-family: Satoshi;
 }
-.times{
+.times,.hidden,.open{
   display: none;
 }
 /* HomePage styles */
+.cta-remark-mobile{
+  display: none;
+}
 .cta-remark{
   padding: 8px, 60px, 8px, 60px;
   background: rgba(79, 112, 91, 1);
@@ -579,86 +582,99 @@ line-height: 16.2px;
 }
 
 @media screen and (max-width: 600px) {
-  .cta-remark p{
+  main{
+    overflow-x: hidden;
+  }
+  .cta-remark-mobile{
+    display: block;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.6px;
+    background: rgba(79, 112, 91, 1);
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cta-remark{
+ display: none;
+  }
+  
+  .cta-remark p {
     font-size: 16px;
     font-weight: 500;
     line-height: 21.6px;
   }
-  
-  nav ul.hidden{
+
+  .hidden {
     display: none;
     transition: all 0.8s ease;
   }
-  nav ul.open{
-    display: block;
-    transition: all 0.8s ease;
-  }
-  nav .open img.times{
-    display: block;
-    width: 16px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
 
-  
-  nav{
+
+
+  nav {
     position: relative;
+    overflow: hidden;
     padding: 0;
     border-bottom: none;
   }
-  nav ul{
+
+  .open {
+    width: 100%;
     position: fixed;
     left: 0;
     top: 0;
-    justify-content: center;
-    flex-direction: column;
-    width: 200px;
-    height: 100vh;
-    background: #FFFFFF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    padding: 50px 0 0 20px;
-    transition: all 0.8s ease;
+    display: block;
+    z-index: 150;
   }
-  nav ul li{
-    margin-bottom:20px;
-  }
+
   .nav-container {
-    padding:0 20px;
+    padding: 0 20px;
     padding-top: 16px;
   }
-  .search-mobile{
+  .nav-container nav ul{
+    display: none;
+  }
+  .search-mobile {
     margin-top: 16px;
     display: flex;
     align-items: center;
     padding: 8.5px;
     gap: 8px;
-    border-radius:8px ;
-    border: 1px solid rgba(0, 0, 0, 0.2)
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
   }
-  .search-mobile input{
+
+  .search-mobile input {
     outline: none;
     border: none;
     background: transparent;
   }
-  nav .nav-item-right .search{
+
+  nav .nav-item-right .search {
     display: none;
   }
-  .burger-menu{
+
+  .burger-menu {
     display: block;
   }
-  .hover-action{
+
+  .hover-action {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  
-  ul img.time{
+
+  ul img.time {
     width: 16px;
     position: absolute;
     top: 10px;
     right: 10px;
+  }
+  .hero-container{
+    padding-top: 57px;
   }
   .hero-content,.footer-content{
     display: flex;

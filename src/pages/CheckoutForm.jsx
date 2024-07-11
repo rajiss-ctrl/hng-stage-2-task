@@ -17,6 +17,9 @@ const CheckoutForm = () => {
 
     return (
         <section className='checkout'>
+           <div className="cta-remark-mobile">
+            <p> Free deliveries on all orders within Nigeria</p>
+          </div>
             <div className="cta-remark">
               <p> Free deliveries on all orders within Nigeria</p>
             </div>  
@@ -104,8 +107,8 @@ const CheckoutForm = () => {
                   </div>
                 <form action="">
                   <div className="">
-                    <input type="text" placeholder='Card Number' />
-                    <input type="text" placeholder='Card Name' />
+                    <input type="number" placeholder='Card Number' />
+                    <input type="number" placeholder='Card Name' />
                     <div className="ex-date-cvv">
                       <input type="text" placeholder='Expiry Date' />
                       <input type="text" placeholder='CVV' />

@@ -81,7 +81,10 @@ const CartPreviewPage = () => {
   };
 
   return (
-    <section>
+    <section className='cart-preview-container'>
+         <div className="cta-remark-mobile">
+            <p> Free deliveries on all orders within Nigeria</p>
+      </div>
       <div className="cta-remark">
         <p> Free deliveries on all orders within Nigeria</p>
       </div>
