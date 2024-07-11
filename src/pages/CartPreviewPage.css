@@ -388,8 +388,12 @@ td.td-flex .title-size span {
 /* Responsive CSS */
 
 @media (max-width: 1024px) {
+  .cartpreview-wrap{
+    padding: 0 30px 0 0;
+    gap: 20px;
+}
   .product {
-    width: 80%;
+    width: 60%;
   }
 
   th, td {
@@ -419,7 +423,11 @@ td.td-flex .title-size span {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
+  .cartpreview-wrap{
+    padding: 0 30px 0 0;
+    gap: 20px;
+}
   .product {
     width: 90%;
     padding: 20px 0 60px 0;
@@ -457,6 +465,9 @@ td.td-flex .title-size span {
 
   td.td-flex .title-size h4 {
     font-size: 12px;
+  }
+  .cost .btn button{
+    padding: 10px 20px;
   }
 }
 
@@ -605,7 +616,12 @@ td.td-flex .title-size span {
 
   .cost {
     margin-top: 60px;
+    padding: 0;
   }
+  .apple-pay,.credit-card,.bank{
+    padding: 16px 20px;
+  }
+ 
   .cost button{
     background: rgba(79, 112, 91, 1);
     padding: 18px;

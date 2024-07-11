@@ -98,7 +98,7 @@ nav ul{
   gap: 40px;
   border: none;
 }
-.search-mobile{
+.search-mobile,.search-mobile-none{
   display: none;
 }
 nav ul,nav .nav-item-right, 
@@ -646,7 +646,9 @@ line-height: 16.2px;
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.2);
   }
-
+.search-mobile-none{
+  display: none;
+}
   .search-mobile input {
     outline: none;
     border: none;

@@ -38,7 +38,7 @@ const NavBar = () => {
         <li className='hover-action'> Contact</li>
       </ul>
       <div className="nav-item-right">
-      <div className="search">
+      <div  className={`search`}>
         <img src={Search} alt="" />
         <input placeholder='Searh' type="text" />
       </div>
@@ -56,7 +56,7 @@ const NavBar = () => {
       </div>
 
     </nav>
-      <div className="search-mobile">
+      <div  className={`${location.pathname === "/checkout-form" || location.pathname === "/cart-preview-page" ? "search-mobile-none" : "search-mobile"}`}>
         <img src={Search} alt="" />
         <input placeholder='Searh' type="text" />
       </div>

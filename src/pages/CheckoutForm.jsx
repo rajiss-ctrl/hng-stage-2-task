@@ -111,10 +111,10 @@ const CheckoutForm = () => {
                     <input type="number" placeholder='Card Name' />
                     <div className="ex-date-cvv">
                       <input type="text" placeholder='Expiry Date' />
-                      <input type="text" placeholder='CVV' />
+                      <input type="number" placeholder='CVV' />
                     </div>
                     <div className="form2-btn">
-                    <button>Make Payment</button>
+                      <button>Make Payment</button>
                     </div>
                   </div>
                 </form>
