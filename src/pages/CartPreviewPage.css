@@ -385,7 +385,6 @@ td.td-flex .title-size span {
 .for-mobile,.btn-mobile{
   display: none;
 }
-/* Responsive CSS */
 
 @media (max-width: 1024px) {
   .cartpreview-wrap{

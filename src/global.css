@@ -7,6 +7,9 @@
 .times,.hidden,.open{
   display: none;
 }
+button{
+  cursor: pointer;
+}
 /* HomePage styles */
 .cta-remark-mobile{
   display: none;
@@ -457,7 +460,7 @@ padding: 47px 0 34px 0;
     padding-right: 40px;
   }
   .feature-product{
-    padding:104px 0 87px 40px;
+    padding:104px 40px 87px 40px;
   }
   footer .footer-img img{
     width: 450px;
@@ -480,14 +483,33 @@ margin-top: 16px;
 
 }
 @media screen and (max-width: 912px) {
+  .hero-container{
+    padding-top: 57px;
+  }
+  .cta-remark-mobile{
+    display: block;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.6px;
+    background: rgba(79, 112, 91, 1);
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cta-remark{
+ display: none;
+  }
+  
   .search-mobile input{
     outline: none;
     border: none;
     background: transparent;
   }
-  nav .nav-item-right .search{
+  /* nav .nav-item-right .search{
     display: none;
-  }
+  } */
  
 
   .hero-content,.footer-content{
@@ -566,54 +588,10 @@ padding: 0 0 0 13px;
 }
 }
 @media screen and (max-width: 768px) {
-  .rectangle-img .feature-1 button,
-  .rectangle-img .feature-2 button{
-    margin:0 0 0 13px;
- padding: 10px 30px 10px 30px;
-font-weight: 400;
-line-height: 16.2px;
-  }
-  .rectangle-img .feature-1 h4,
-  .rectangle-img .feature-2 h4{
-    font-size: 16px;
-    padding: 18px 38% 0 13px;
-  }
-  
-}
-
-@media screen and (max-width: 600px) {
-  main{
-    overflow-x: hidden;
-  }
-  .cta-remark-mobile{
-    display: block;
-    font-family: Satoshi;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 21.6px;
-    background: rgba(79, 112, 91, 1);
-    color: rgba(255, 255, 255, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .cta-remark{
- display: none;
-  }
-  
-  .cta-remark p {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 21.6px;
-  }
-
   .hidden {
     display: none;
     transition: all 0.8s ease;
   }
-
-
-
   nav {
     position: relative;
     overflow: hidden;
@@ -637,7 +615,37 @@ line-height: 16.2px;
   .nav-container nav ul{
     display: none;
   }
-  .search-mobile {
+  .burger-menu {
+    display: block;
+  }
+  .rectangle-img .feature-1 button,
+  .rectangle-img .feature-2 button{
+    margin:0 0 0 13px;
+ padding: 10px 30px 10px 30px;
+font-weight: 400;
+line-height: 16.2px;
+  }
+  .rectangle-img .feature-1 h4,
+  .rectangle-img .feature-2 h4{
+    font-size: 16px;
+    padding: 18px 38% 0 13px;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  main{
+    overflow-x: hidden;
+  }
+
+  
+  .cta-remark p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.6px;
+  }
+
+    .search-mobile {
     margin-top: 16px;
     display: flex;
     align-items: center;
@@ -675,9 +683,7 @@ line-height: 16.2px;
     top: 10px;
     right: 10px;
   }
-  .hero-container{
-    padding-top: 57px;
-  }
+
   .hero-content,.footer-content{
     display: flex;
     justify-content: center;

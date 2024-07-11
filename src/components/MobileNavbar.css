@@ -43,8 +43,37 @@ nav.mobile-nav-container ul li a{
     line-height: 16.2px;
     color: rgba(0, 0, 0, 1);
 }
-@media screen and (min-width: 600px){
+@media screen and (min-width: 769px){
     nav.mobile-nav-container{
         display: none;
+    }
+}
+@media screen and (min-width: 601px){
+    nav.mobile-nav-container{
+        border-radius: 0;
+    }
+    nav.mobile-nav-container ul{
+        margin-top: 60px;
+    }
+    nav.mobile-nav-container,
+    nav.mobile-nav-container ul{
+        width: 300px;
+        height: 100vh;
+        justify-content:start;
+        align-items: left;
+    }
+    nav.mobile-nav-container ul li{
+        font-family: Satoshi;
+        font-size: 16px;
+        text-align: left;
+        padding-left: 30px;
+    }
+    nav.mobile-nav-container ul li a{
+        text-decoration: none;
+        font-family: Satoshi;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16.2px;
+        color: rgba(0, 0, 0, 1);
     }
 }
