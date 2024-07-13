@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Your Extension Name",
+    "version": "1.0",
+    "description": "Your extension description",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon-16.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+      }
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["content_script.js", "images/*"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  

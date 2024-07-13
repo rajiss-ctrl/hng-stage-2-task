@@ -1,6 +1,7 @@
 import FeatureProduct from "../components/FeatureProduct"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
+import './HomePage.css';
 
 const HomePage = () => {
   return (
@@ -11,10 +12,6 @@ const HomePage = () => {
         <Hero/>
         <FeatureProduct/>
         <Footer/>
-      {/* <AboutUs/>
-      <ExploreResort/>
-      <Testimony/>
-      <OurStories/> */}
     </main>
   )
 }

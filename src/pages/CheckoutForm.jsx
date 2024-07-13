@@ -6,8 +6,13 @@ import Leave from '../assets/leave.svg'
 import Map from '../assets/map.svg'
 import CreditCard from '../assets/credit-card.svg'
 import { useForm } from 'react-hook-form';
+import { useCart } from '../context/ProductContext';
 
 const CheckoutForm = () => {
+
+
+
+
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {

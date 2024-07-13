@@ -1,92 +1,73 @@
-import React, { useState } from 'react'
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
+import React, { useState } from 'react';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 import './CartPreviewPage.css';
-import Product1 from '../assets/product1.svg'
-import Product2 from '../assets/product2.svg'
-import Product3 from '../assets/product3.svg'
-import Product4 from '../assets/product4.svg'
-import Product5 from '../assets/product5.svg'
-import Trash from '../assets/trash-icon.svg'
-import Minus from '../assets/minus.svg'
-import Plus from '../assets/plus.svg'
-import Transfer from '../assets/transfer.svg'
-import CreditCard from '../assets/credit-card.svg'
-import ApplePay from '../assets/apple-pay.svg'
+import Trash from '../assets/trash-icon.svg';
+import Minus from '../assets/minus.svg';
+import Plus from '../assets/plus.svg';
+import Transfer from '../assets/transfer.svg';
+import CreditCard from '../assets/credit-card.svg';
+import ApplePay from '../assets/apple-pay.svg';
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/ProductContext';
 
 const CartPreviewPage = () => {
   const [selectedPayment, setSelectedPayment] = useState(null);
   const [checkedItems, setCheckedItems] = useState([]);
   const [checkAll, setCheckAll] = useState(false);
 
-  const products = [
-    {
-      image: `${Product1}`,
-      title: 'vitamin C Serum',
-      price: "₦18,000",
-      size: "Medium",
-    },
-    {
-      image: `${Product2}`,
-      title: 'Hair serum',
-      price: "₦2,001,000",
-      size: "XXL",
-    },
-    {
-      image: `${Product3}`,
-      title: 'Oloture skin care set',
-      price: "₦78,900",
-      size: "Medium",
-    },
-    {
-      image: `${Product4}`,
-      title: 'Skin toner',
-      price: "₦32,000",
-      size: "Small",
-    },
-    {
-      image: `${Product5}`,
-      title: 'Skin moisturizer',
-      price: "₦205,000",
-      size: "Medium",
-    },
-  ];
+  const { state, dispatch } = useCart();
+
+  const handleRemoveFromCart = (productId) => {
+    dispatch({ type: 'REMOVE_FROM_CART', productId });
+  };
+
+  const handleUpdateQuantity = (productId, quantity) => {
+    if (quantity > 0) {
+      dispatch({ type: 'UPDATE_QUANTITY', productId, quantity });
+    }
+  };
+
+  const handleClearCart = () => {
+    dispatch({ type: 'CLEAR_CART' });
+  };
+
+  const totalPrice = state.cart.reduce((total, item) => total + item.current_price[0]?.NGN[0] * item.quantity, 0);
 
   const handlePaymentSelect = (payment) => {
     setSelectedPayment(payment);
   };
 
   const handleCheckout = () => {
-    navigate("/checkout-form");
-  }
+    navigate('/checkout-form');
+  };
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleCheckAll = () => {
     setCheckAll(!checkAll);
     if (!checkAll) {
-      setCheckedItems(products.map((_, index) => index));
+      setCheckedItems(state.cart.map((item) => item.id));
     } else {
       setCheckedItems([]);
     }
   };
 
-  const handleCheckItem = (index) => {
-    if (checkedItems.includes(index)) {
-      setCheckedItems(checkedItems.filter((item) => item !== index));
+  const handleCheckItem = (id) => {
+    if (checkedItems.includes(id)) {
+      setCheckedItems(checkedItems.filter((itemId) => itemId !== id));
     } else {
-      setCheckedItems([...checkedItems, index]);
+      setCheckedItems([...checkedItems, id]);
     }
   };
 
   return (
     <section className='cart-preview-container'>
-         <div className="cta-remark-mobile">
-            <p> Free deliveries on all orders within Nigeria</p>
+      <div className="cta-remark-mobile">
+        <p>Free deliveries on all orders within Nigeria</p>
       </div>
       <div className="cta-remark">
-        <p> Free deliveries on all orders within Nigeria</p>
+        <p>Free deliveries on all orders within Nigeria</p>
       </div>
       <NavBar />
       <h1 className='cart-preview'>Cart</h1>
@@ -108,45 +89,48 @@ const CartPreviewPage = () => {
               </tr>
             </thead>
             <tbody>
-              {products.map((product, index) => (
-                <tr key={index}>
-                  <td className='td-flex'>
-                    <div className="check-img">
-                      <input
-                        type="checkbox"
-                        checked={checkedItems.includes(index)}
-                        onChange={() => handleCheckItem(index)}
-                      />
-                      <img src={product.image} alt="" />
-                    </div>
-                    <div className="title-size">
-                      <h4>{product.title}</h4>
-                      <span>{product.size}</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="minus-plus">
-                      <img src={Minus} alt="" />
-                      <span>1</span>
-                      <img src={Plus} alt="" />
-                    </div>
-                    <button>
-                      <img src={Trash} alt="" />
-                      <span>Delete</span>
-                    </button>
-                  </td>
-                  <td className='price'>{product.price}</td>
-                </tr>
-              ))}
+              {state.cart.map((item, index) => {
+                const image = item?.photos[0]?.url;
+                return (
+                  <tr key={item.id}>
+                    <td className='td-flex'>
+                      <div className="check-img">
+                        <input
+                          type="checkbox"
+                          checked={checkedItems.includes(item.id)}
+                          onChange={() => handleCheckItem(item.id)}
+                        />
+                        <img src={`/api/images/${image}`} alt="" />
+                      </div>
+                      <div className="title-size">
+                        <h4>{item.name}</h4>
+                        {/* <span>{item.size}</span> */}
+                      </div>
+                    </td>
+                    <td>
+                      <div className="minus-plus">
+                        <img onClick={() => handleUpdateQuantity(item.id, item.quantity - 1)} src={Minus} alt="" />
+                        <span>{item.quantity}</span>
+                        <img onClick={() => handleUpdateQuantity(item.id, item.quantity + 1)} src={Plus} alt="" />
+                      </div>
+                      <button onClick={() => handleRemoveFromCart(item.id)}>
+                        <img src={Trash} alt="trash icon" />
+                        <span>Delete</span>
+                      </button>
+                    </td>
+                    <td className='price'>₦{item.current_price[0]?.NGN[0]}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
-            <h4 className='for-mobile'>Breakdown</h4>
+        <h4 className='for-mobile'>Breakdown</h4>
         <div className="cost">
           <div className="calculation">
             <div className="subtotal">
               <span>Sub-total</span>
-              <h4>₦2,798,000</h4>
+              <h4>₦{totalPrice}</h4>
             </div>
             <div className="discount">
               <span>Discount</span>
@@ -154,9 +138,8 @@ const CartPreviewPage = () => {
             </div>
             <div className="grand-total">
               <span>Grand total</span>
-              <span>₦2,800,000</span>
+              <span>₦{totalPrice}</span>
             </div>
-
             <div className="mode-of-payment">
               <h4>Mode of payment</h4>
               <div
@@ -186,13 +169,13 @@ const CartPreviewPage = () => {
             <button onClick={handleCheckout}>Proceed to checkout</button>
           </div>
         </div>
-          <div className="btn-mobile">
-            <button onClick={handleCheckout}>Proceed to checkout</button>
-          </div>
+        <div className="btn-mobile">
+          <button onClick={handleCheckout}>Proceed to checkout</button>
+        </div>
       </div>
       <Footer />
     </section>
-  )
-}
+  );
+};
 
-export default CartPreviewPage
+export default CartPreviewPage;

@@ -198,13 +198,19 @@ ul li.hover-action a{
   position: relative;
 }
 .cart-box{
-  width:10px;
-  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width:16px;
+  height: 16px;
   border-radius: 50%;
-  /* color:rgb(60, 149, 238,0.5); */
+  color:#FFFFFF;
+  font-size: 10px;
+  font-weight: 600;
   position: absolute;
-  top:-5px;
-  right: 0;
+  top:-8px;
+  right: -3px;
   background:rgba(255, 59, 48, 1);
 }
 
@@ -215,84 +221,6 @@ nav .nav-item-right{
 
 
 
-/* feature product */
-.feature-product{
-  padding:104px 60px 87px 60px;
-}
-.feature-product h2{
-  text-align: center;
-  color:rgba(0, 0, 0, 1);
-font-size: 24px;
-font-weight: 700;
-line-height: 32.4px;
-}
-.feature-product p{
-  text-align: center;
-  color:rgba(0, 0, 0, 0.7);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  margin-bottom: 22px;  
-}
-.center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.rectangle-img{
-  margin: 79px 0 104px 0;
-  width: 100%;
-  gap: 16px;
-}
-
-.rectangle-img .feature-1{
-  width: 50%;
-  height: 348px;
-  border-radius: 4px;
-  background-image: url('./assets/Rectangle 9.svg'); 
-}
-.rectangle-img .feature-1 h4,
-.rectangle-img .feature-2 h4{
-  padding: 32px 0 0 32px;
-  font-family: Inter;
-font-size: 24px;
-font-weight: 700;
-line-height: 32px;
-color: rgba(0, 0, 0, 0.7);
-}
-.rectangle-img .feature-1 button,
-.rectangle-img .feature-2 button{
-  border:none ;
-  outline: none;
-  margin:18px 0 0 32px;
-  padding: 14px 58px 14px 58px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);
-  background:rgba(255, 255, 255, 1);
-  color: rgba(79, 112, 91, 1);
-  border-radius: 8px;
-  cursor: pointer;
-}
-.rectangle-img .feature-2{
-  width: 50%;
-  height: 348px;
-  border-radius: 4px;
-  background-image: url('./assets/Frame 79.svg');
-}
-.rectangle-img .feature-1,
-.rectangle-img .feature-2{
-  background-position:bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-}
-.rectangle-img .feature-2 p{
-  font-family: Satoshi;
-font-size: 16px;
-font-weight: 400;
-line-height: 26px;
-padding:0 48% 0 32px;
-text-align: left;
-} 
 /* CarouselComponent styles */
 .carousel{
   display: flex;
@@ -320,7 +248,7 @@ text-align: left;
   transition: transform 0.3s ease-in-out;
 }
 .carousel-card button{
-  display: none; /* Initially hide the button */
+  display: none;
 }
 .slick-center .carousel-card button {
   display: flex; /* Show the button when the card is centered */
@@ -448,20 +376,12 @@ color:rgba(0, 0, 0, 0.3);
 padding: 47px 0 34px 0;
 }
 
-/* nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 60px;
-} */
 @media screen and (max-width: 1024px) {
   nav{
     padding-left: 40px;
     padding-right: 40px;
   }
-  .feature-product{
-    padding:104px 40px 87px 40px;
-  }
+  
   footer .footer-img img{
     width: 450px;
   }
@@ -507,11 +427,8 @@ margin-top: 16px;
     border: none;
     background: transparent;
   }
-  /* nav .nav-item-right .search{
-    display: none;
-  } */
- 
 
+  
   .hero-content,.footer-content{
     display: flex;
     justify-content: center;
@@ -558,34 +475,7 @@ padding:2% 20%;
     margin: 30px 0;
     width: 100%;
   }
-  .feature-product{
-    padding:30px 30px 0 30px;
-}
-.rectangle-img .feature-1,
-.rectangle-img .feature-2{
-  width: 100%;
-  height: 250px;
-  border-radius: 8px;
-}
-.rectangle-img .feature-1 h4,
-.rectangle-img .feature-2 h4{
-  font-size: 20px;
-  padding: 18px 0 0 13px;
-}
-.rectangle-img .feature-1 p,
-.rectangle-img .feature-2 p{
-font-size: 16px;
-padding: 0 0 0 13px;
-}
-.rectangle-img .feature-2 p{
-  padding:0 45% 0 13px;
-  margin-bottom: 8px;
-}
-.rectangle-img .feature-1 button,
-.rectangle-img .feature-2 button{
-  margin:16px 0 0 13px;
-
-}
+  
 }
 @media screen and (max-width: 768px) {
   .hidden {
@@ -618,18 +508,6 @@ padding: 0 0 0 13px;
   .burger-menu {
     display: block;
   }
-  .rectangle-img .feature-1 button,
-  .rectangle-img .feature-2 button{
-    margin:0 0 0 13px;
- padding: 10px 30px 10px 30px;
-font-weight: 400;
-line-height: 16.2px;
-  }
-  .rectangle-img .feature-1 h4,
-  .rectangle-img .feature-2 h4{
-    font-size: 16px;
-    padding: 18px 38% 0 13px;
-  }
   
 }
 
@@ -637,8 +515,6 @@ line-height: 16.2px;
   main{
     overflow-x: hidden;
   }
-
-  
   .cta-remark p {
     font-size: 16px;
     font-weight: 500;
@@ -724,9 +600,7 @@ text-align: center;
   .hero-content .hero-img img{
     width: 100%;
   }
-  .feature-product{
-      padding:62px 20px 0 20px;
-  }
+  
   .carousel-container {
     width: 100%;
     padding:0 0;
@@ -810,37 +684,6 @@ color: rgba(79, 112, 91, 1);
     margin: 60px 0 60px 0;
   }
   
-  .rectangle-img .feature-1,
-  .rectangle-img .feature-2{
-    width: 100%;
-    height: 153px;
-    border-radius: 8px;
-  }
-  .rectangle-img .feature-1 h4,
-  .rectangle-img .feature-2 h4{
-    font-size: 16px;
-    padding: 18px 0 0 13px;
-  }
-  .rectangle-img .feature-1 p,
-  .rectangle-img .feature-2 p{
-font-size: 8px;
-font-weight: 400;
-line-height: 14px;
-padding: 0 0 0 13px;
-  }
-  .rectangle-img .feature-2 p{
-    padding:0 48% 0 13px;
-    margin-bottom: 8px;
-  }
-  .rectangle-img .feature-1 button,
-  .rectangle-img .feature-2 button{
-    margin:0 0 0 13px;
- padding: 8px 24px 8px 24px;
- font-family: Satoshi;
-font-size: 12px;
-font-weight: 700;
-line-height: 16.2px;
-  }
   
   footer{
     padding: 20px;

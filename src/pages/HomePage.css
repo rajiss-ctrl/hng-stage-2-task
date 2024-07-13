@@ -1,0 +1,20 @@
+/* HomePage styles
+.cta-remark-mobile{
+    display: none;
+  }
+  .cta-remark{
+    padding: 8px, 60px, 8px, 60px;
+    background: rgba(79, 112, 91, 1);
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cta-remark p{
+    padding: 8px, 60px, 8px, 60px;
+    Line-height:21.6px;
+    font-weight: 500;
+    font-family: Satoshi;
+  }
+  
+   */

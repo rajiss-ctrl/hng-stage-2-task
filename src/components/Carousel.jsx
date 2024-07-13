@@ -57,10 +57,10 @@ const CarouselComponent = ({ items }) => {
                   <img src={item.whitestar} alt="white star" />
                 </div>
               </div>
-              <button>
+              {/* <button>
                 <img src={Cart} alt="cart icon" />
                 <span>Add To Cart</span>
-              </button>
+              </button> */}
             </div>
           </div>
         ))}
