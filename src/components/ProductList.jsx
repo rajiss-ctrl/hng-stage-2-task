@@ -13,8 +13,15 @@ const ProductList = () => {
   const { dispatch } = useCart();
   const navigate = useNavigate();
 
+
+
+  const API_BASE_URL = '/api';
+  // const API_BASE_URL = '/api';
+  // const API_KEY = "c215be6b62ae49e58b299803ba1b180520240712134816085034";
+  // const APP_ID = "LS345VNCKDGPKGY";
+  // const ORGANIZATION_ID = "07b4ca15b24e480e9e29d0150089bde0";
   
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+  // const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const API_KEY = import.meta.env.VITE_API_KEY;
    const APP_ID = import.meta.env.VITE_APP_ID;
   const ORGANIZATION_ID = import.meta.env.VITE_ORGANIZATION_ID;
