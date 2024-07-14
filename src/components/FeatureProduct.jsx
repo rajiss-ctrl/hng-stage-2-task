@@ -56,7 +56,7 @@ const FeatureProduct = () => {
       <div className="product-list_feature">
         <ProductList/>
       </div>
-      <div className="center">
+      <div className="center-feature">
         <div className="rectangle-img">
           <div className="feature-1">
             <h4>New Arrival - hand cream</h4>

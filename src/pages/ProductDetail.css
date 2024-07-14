@@ -6,3 +6,10 @@
     flex-direction: row;
 }
 
+@media screen and (max-width: 600px){
+    .productdetails{
+        flex-direction: column;
+        padding:100px 15px;
+    }
+}
+

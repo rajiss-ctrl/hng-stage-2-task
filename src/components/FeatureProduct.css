@@ -17,7 +17,7 @@
     line-height: 26px;
     margin-bottom: 22px;  
   }
-  .center{
+  .center-feature{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,6 +134,10 @@
 
       .feature-product{
         padding:62px 20px 0 20px;
+    }
+
+    .center-feature{
+      margin-top: -20px;
     }
       .rectangle-img .feature-1,
       .rectangle-img .feature-2{
