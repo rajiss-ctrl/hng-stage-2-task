@@ -73,6 +73,9 @@ const CartPreviewPage = () => {
       <h1 className='cart-preview'>Cart</h1>
       <div className="cartpreview-wrap">
         <div className="product">
+          {
+          state.cart.length === 0 ?
+          <h3>Your cart is empty</h3> :
           <table>
             <thead>
               <tr>
@@ -124,6 +127,7 @@ const CartPreviewPage = () => {
               })}
             </tbody>
           </table>
+          }
         </div>
         <h4 className='for-mobile'>Breakdown</h4>
         <div className="cost">
