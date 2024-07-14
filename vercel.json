@@ -1,17 +1,11 @@
 {
-  "rewrites":[
-    {
-      "source":"/api/(.*)",
-      "destination":"https://api.timbu.cloud/$1"
-    },
-    {
-      "source":"/(.*)",
-      "destination":"/index.html"
-    }
-  ],
   "routes": [
     {
       "handle": "filesystem"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "https://api.timbu.cloud/$1"
     },
     {
       "src": "/(.*)",
