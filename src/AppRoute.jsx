@@ -5,6 +5,7 @@ import CartPreviewPage from './pages/CartPreviewPage'
 import CheckoutForm from './pages/CheckoutForm'
 import ProductDetail from './pages/ProductDetail'
 import OrderConfirmation from './components/OrderConfirmation'
+import AllProducts from './pages/AllProducts'
 
 
 
@@ -18,6 +19,7 @@ const AppRoute = () => {
         </Layout>
      }/>
      <Route path="/order-confirmation" element={<OrderConfirmation/>} />
+     <Route path="/all-products" element={<AllProducts/>} />
      <Route path="/product/:productId" element={<ProductDetail/>} />
      <Route path="/cart-preview-page" element={<CartPreviewPage/>} />
      <Route path="/checkout-form" element={<CheckoutForm/>} />

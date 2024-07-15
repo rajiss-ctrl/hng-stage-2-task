@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import BlackStar from '../assets/star.svg';
 import WhiteStar from '../assets/star-white.svg';
 import Cart from '../assets/cart.svg';
-import './ProductList.css';
+import '../components/ProductList.css';
 import { useCart } from '../context/ProductContext';
+import NavBar from '../components/NavBar';
 
-const ProductList = () => {
+const AllProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -26,7 +27,7 @@ const ProductList = () => {
     const fetchData = async () => {
       try {
         console.log('Fetching data from API');
-        const response = await fetch(`${API_BASE_URL}/products?organization_id=${ORGANIZATION_ID}&reverse_sort=false&page=1&size=10&Appid=${APP_ID}&Apikey=${API_KEY}`);
+        const response = await fetch(`${API_BASE_URL}/products?organization_id=${ORGANIZATION_ID}&reverse_sort=false&page=1&size=30&Appid=${APP_ID}&Apikey=${API_KEY}`);
         console.log('Response status:', response.status);
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -72,7 +73,9 @@ const ProductList = () => {
   };
 
   return (
-    <div className='product-list-cont'>
+    <>
+    <NavBar/>
+    <div className='product-list-cont' style={{marginTop:"100px", marginBottom:"100px"}}>
       
       <div className='product-list'>
         {products?.map((product) => {
@@ -107,9 +110,9 @@ const ProductList = () => {
           );
         })}
       </div>
-      <button onClick={()=>{navigate('/all-products')}}>View More</button>
     </div>
+    </>
   );
 };
 
-export default ProductList;
+export default AllProducts;
