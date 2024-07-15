@@ -101,7 +101,7 @@ const ProductList = () => {
                 <img src={Cart} alt="cart icon" />
                 <span>Add To Cart</span>
               </button>
-                <button onClick={() => handleProductClick(product.id)}>Check Details</button>
+                <button onClick={() => handleProductClick(product.id)}>View Details</button>
               </div>
             </div>
           );
