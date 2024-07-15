@@ -116,7 +116,7 @@ const CartPreviewPage = () => {
                         <span>{item.quantity}</span>
                         <img onClick={() => handleUpdateQuantity(item.id, item.quantity + 1)} src={Plus} alt="" />
                       </div>
-                      <button onClick={() => handleRemoveFromCart(item.id)}>
+                      <button className='center-del-text' onClick={() => handleRemoveFromCart(item.id)}>
                         <img src={Trash} alt="trash icon" />
                         <span>Delete</span>
                       </button>

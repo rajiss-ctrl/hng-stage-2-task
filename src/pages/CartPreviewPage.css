@@ -110,18 +110,21 @@ input[type="checkbox"]:checked::before {
     font-size: 12px;
     font-weight: 700;
     line-height: 16.2px;
+    text-align: center;
  }
- td button{
+ 
+ td button.center-del-text{
     border: none;
     outline: none;
     background: transparent;
     margin-top: 8px;
-    width: 100%;
+    width: 88px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
     cursor: pointer;
+    text-align: center;
  }
  td span{
     font-family: Satoshi;
@@ -322,18 +325,18 @@ td div.minus-plus {
   line-height: 16.2px;
 }
 
-td button {
+/* td button {
   border: none;
   outline: none;
   background: transparent;
   margin-top: 8px;
-  width: 100%;
+  width: 88px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
   cursor: pointer;
-}
+} */
 
 td span {
   font-family: Satoshi;
@@ -592,6 +595,9 @@ td.td-flex .title-size span {
     padding: 4px;
     display: flex;
     align-items: center;
+  }
+  button.center-del-text{
+    width: 50px !important;
   }
 
   td button img {
