@@ -15,6 +15,7 @@ const CartPreviewPage = () => {
   const [selectedPayment, setSelectedPayment] = useState(null);
   const [checkedItems, setCheckedItems] = useState([]);
   const [checkAll, setCheckAll] = useState(false);
+  const [error, setError] = useState('');
 
   const { state, dispatch } = useCart();
 
@@ -36,10 +37,7 @@ const CartPreviewPage = () => {
 
   const handlePaymentSelect = (payment) => {
     setSelectedPayment(payment);
-  };
-
-  const handleCheckout = () => {
-    navigate('/checkout-form');
+    setError(''); // Clear error message when a payment method is selected
   };
 
   const navigate = useNavigate();
@@ -59,6 +57,14 @@ const CartPreviewPage = () => {
     } else {
       setCheckedItems([...checkedItems, id]);
     }
+  };
+
+  const handleCheckout = () => {
+    if (!selectedPayment) {
+      setError('Please select a payment method before proceeding to checkout.');
+      return;
+    }
+    navigate('/checkout-form');
   };
 
   return (
@@ -167,6 +173,7 @@ const CartPreviewPage = () => {
                 <span>Apple Pay</span>
                 <img src={ApplePay} alt="Apple Pay" />
               </div>
+              {error && <p className="error">{error}</p>}
             </div>
           </div>
           <div className="btn">
