@@ -101,7 +101,7 @@ form h4{
 form div .form2-btn{
     text-align: center;
 }
-form div .form2-btn button{
+ .form2-btn button{
     color: white;
     padding: 10px 58px 10px 58px;
     border-radius: 8px;
