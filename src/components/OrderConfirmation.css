@@ -1,0 +1,16 @@
+.confirmation-remark{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 0 0;
+}
+.confirmation-remark h4{
+    color: rgba(0, 0, 0, 1);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+}
+.confirmation-remark img{
+    width: 30%;
+}

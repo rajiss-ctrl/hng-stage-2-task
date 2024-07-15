@@ -5,6 +5,30 @@
     gap: 20px;
     flex-direction: row;
 }
+.productdetails h3{
+      /* margin-top: 16px; */
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+.details button{
+    font-family: Satoshi;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 28px;
+  color: rgba(79, 112, 91, 1); 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 2px 8px;
+    border: none;
+    gap: 6px;
+    border-radius: 8px;
+    border: 1px solid rgba(79, 112, 91, 0.5);
+    background: rgba(255, 255, 255, 1);
+    margin-top: 15%;
+}
 
 @media screen and (max-width: 600px){
     .productdetails{

@@ -6,6 +6,10 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
+    padding: 0;
+}
+.productlist-card img{
+  border-radius: 8px;
 }
 .productlist-name-price{
     display: flex;
@@ -16,12 +20,20 @@
 /* .desc{
     padding-left: 0;
 } */
-
-.product-list-cont button{
+.productlist-cta{
+  display: flex;
+  justify-content: space-between;
+}
+.product-list-cont .productlist-cta button{
+  font-family: Satoshi;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 28px;
+  color: rgba(79, 112, 91, 1); 
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 5px 8px;
+    padding: 2px 8px;
     border: none;
     gap: 6px;
     border-radius: 8px;
@@ -34,7 +46,7 @@
   }
   .product-list-cont button span{
     font-family: Satoshi;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
     line-height: 28px;
     color: rgba(79, 112, 91, 1);  

@@ -7,10 +7,11 @@ import Map from '../assets/map.svg'
 import CreditCard from '../assets/credit-card.svg'
 import { useForm } from 'react-hook-form';
 import { useCart } from '../context/ProductContext';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutForm = () => {
 
-
+const navigate = useNavigate()
 
 
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -119,7 +120,7 @@ const CheckoutForm = () => {
                       <input type="number" placeholder='CVV' />
                     </div>
                     <div className="form2-btn">
-                      <button>Make Payment</button>
+                      <button onClick={()=>navigate('/order-confirmation')}>Make Payment</button>
                     </div>
                   </div>
                 </form>

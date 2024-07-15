@@ -79,14 +79,14 @@ const ProductList = () => {
           const image = product?.photos[0]?.url;
           return (
             <div key={product?.id}>
-              <div className="productlist-card" onClick={() => handleProductClick(product.id)}>
+              <div className="productlist-card" >
                 <img src={`/api/images/${image}`} alt="" />
                 <div className="productlist-card-details-container">
                   <div className="productlist-name-price">
                     <h3>{product?.name}</h3>
                     <h3>₦{product?.current_price[0]?.NGN[0]}</h3> 
                   </div>
-                    <p className='desc'>{product?.description}</p>
+                    {/* <p className='desc'>{product?.description}</p> */}
                   <div className="star">
                     <img src={BlackStar} alt="black star" />
                     <img src={BlackStar} alt="black star" />
@@ -96,10 +96,13 @@ const ProductList = () => {
                   </div>
                 </div>
               </div>
+              <div className="productlist-cta">
               <button onClick={(e) => { e.stopPropagation(); handleAddToCart(product); }}>
                 <img src={Cart} alt="cart icon" />
                 <span>Add To Cart</span>
               </button>
+                <button onClick={() => handleProductClick(product.id)}>Check Details</button>
+              </div>
             </div>
           );
         })}
