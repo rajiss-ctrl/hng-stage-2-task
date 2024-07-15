@@ -37,7 +37,9 @@ const NavBar = () => {
           <li className={`hover-action ${location.pathname === "/" ? "active" : "inActive"}`}>
             <Link to="/">Home</Link>
           </li>
-          <li className='hover-action'>Shop</li>
+          <li className={`hover-action ${location.pathname === "/all-products" ? "active" : "inActive"}`}>
+            <Link to="/all-products">Shop</Link>
+          </li>
           <li className='hover-action'>Categories</li>
           <li className='hover-action'>About</li>
           <li className='hover-action'>Blog</li>
