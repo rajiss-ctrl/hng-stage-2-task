@@ -64,6 +64,10 @@ const CartPreviewPage = () => {
       setError('Please select a payment method before proceeding to checkout.');
       return;
     }
+    if (state.cart.length === 0) {
+      setError('Your cart is empty. Please add items to your cart before proceeding to checkout.');
+      return;
+    }
     navigate('/checkout-form');
   };
 
