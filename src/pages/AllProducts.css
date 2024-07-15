@@ -24,7 +24,7 @@
   display: flex;
   justify-content: space-between;
 }
-.product-list-cont .productlist-cta button{
+.product-list-cont-allproducts .productlist-cta button{
   font-family: Satoshi;
   font-size: 10px;
   font-weight: 700;
@@ -41,7 +41,7 @@
     background: rgba(255, 255, 255, 1);
 }
 
-.product-list-cont button img{
+.product-list-cont-allproducts button img{
     width: 16px;
   }
   .product-list-cont button span{
@@ -65,22 +65,11 @@
     line-height: 21.6px;
     
   }
-  .view-more-products-wrap{
-    margin-top: 80px;
-    text-align: center;
-  }
-  button.view-more-products{
-    text-align: center;
-    margin-top: 30px;
-    border: 1px solid #4F705B;
-    color: black;
-    padding: 4px 8px;
-    border-radius: 5px;
-    background: transparent;
-  }
+
+  
   
   @media screen and (max-width: 600px){
-    .product-list-cont{
+    .product-list-cont-allproducts{
       padding:15px;
     }
     .product-list{

@@ -107,7 +107,9 @@ const ProductList = () => {
           );
         })}
       </div>
-      <button onClick={()=>{navigate('/all-products')}}>View More</button>
+      <div className="view-more-products-wrap">
+      <button className='view-more-products' onClick={()=>{navigate('/all-products')}}>View More</button>
+      </div>
     </div>
   );
 };

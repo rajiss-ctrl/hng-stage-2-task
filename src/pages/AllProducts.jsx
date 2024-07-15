@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import BlackStar from '../assets/star.svg';
 import WhiteStar from '../assets/star-white.svg';
 import Cart from '../assets/cart.svg';
-import '../components/ProductList.css';
+import './AllProducts.css';
 import { useCart } from '../context/ProductContext';
 import NavBar from '../components/NavBar';
 
@@ -75,7 +75,7 @@ const AllProducts = () => {
   return (
     <>
     <NavBar/>
-    <div className='product-list-cont' style={{marginTop:"100px", marginBottom:"100px"}}>
+    <div className='product-list-cont-allproducts' style={{marginTop:"100px", marginBottom:"100px"}}>
       
       <div className='product-list'>
         {products?.map((product) => {
@@ -104,7 +104,7 @@ const AllProducts = () => {
                 <img src={Cart} alt="cart icon" />
                 <span>Add To Cart</span>
               </button>
-                <button onClick={() => handleProductClick(product.id)}>View Details</button>
+                <button  onClick={() => handleProductClick(product.id)}>View Details</button>
               </div>
             </div>
           );
