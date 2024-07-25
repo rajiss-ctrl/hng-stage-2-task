@@ -10,18 +10,22 @@ import { Link, useLocation } from 'react-router-dom';
 import MobileNavbar from './MobileNavbar';
 import { useCart } from '../context/ProductContext';
 
-const NavBar = () => {
+const NavBar = ({ onSearch }) => {
   const [burger, setBurger] = useState(false);
   const { state } = useCart();
   const cartItemCount = state.cart.reduce((count, item) => count + item.quantity, 0);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleBurgerMenu = () => {
-    console.log("I am clicked");
     setBurger(prev => !prev);
   };
 
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+    onSearch(e.target.value);
+  };
+
   const location = useLocation();
-  console.log(location);
 
   return (
     <div className='nav-container'>
@@ -48,7 +52,12 @@ const NavBar = () => {
         <div className="nav-item-right">
           <div className={`search`}>
             <img src={Search} alt="" />
-            <input placeholder='Search' type="text" />
+            <input 
+              placeholder='Search' 
+              type="text" 
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
           </div>
           <Link className='cart-total' to="/cart-preview-page">
             <div className="cart-box">{cartItemCount}</div>
@@ -64,7 +73,12 @@ const NavBar = () => {
       </nav>
       <div className={`${location.pathname === "/checkout-form" || location.pathname === "/cart-preview-page" ? "search-mobile-none" : "search-mobile"}`}>
         <img src={Search} alt="" />
-        <input placeholder='Search' type="text" />
+        <input 
+          placeholder='Search' 
+          type="text" 
+          value={searchQuery}
+          onChange={handleSearchChange}
+        />
       </div>
     </div>
   );

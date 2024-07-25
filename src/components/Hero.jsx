@@ -2,14 +2,14 @@ import React from 'react'
 import NavBar from './NavBar'
 import HeroImg from '../assets/Frame 23.svg'
 
-const Hero = () => {
+const Hero = ({handleSearch}) => {
   return (
     <section className='hero-container'>
         <div className="cta-remark-mobile">
             <p> Free deliveries on all orders within Nigeria</p>
       </div>
       <div className="navbar">
-        <NavBar/>
+        <NavBar handleSearch={handleSearch}/>
       </div>
       <div className="hero-content">
         <div className="content">
